@@ -2,7 +2,7 @@
   "name": "weather-cli",
   "version": "1.0.0",
   "private": false,
-  "bin":{
+  "bin": {
     "weather": "weather.js"
   },
   "type": "module",
@@ -26,6 +26,8 @@
     "url": "https://google.com"
   },
   "dependencies": {
-    "axios": "~0.27.2"
+    "axios": "~0.27.2",
+    "chalk": "^5.0.1",
+    "dedent-js": "^1.0.1"
   }
 }
