@@ -2,11 +2,14 @@
   "name": "weather-cli",
   "version": "1.0.0",
   "private": false,
-  "bin": "app.js",
+  "bin":{
+    "weather": "weather.js"
+  },
+  "type": "module",
   "description": "CLI for getting weather",
-  "main": "app.js",
+  "main": "weather.js",
   "scripts": {
-    "start": "node index.js",   
+    "start": "node weather.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -17,11 +20,12 @@
   "license": "ISC",
   "homepage": "https://google.com",
   "repository": {
-    "type": "git",
-    "url": "#"
+    "type": "git"
   },
   "bugs": {
-    "url": "https://google.com",
-    "email": "#"
+    "url": "https://google.com"
+  },
+  "dependencies": {
+    "axios": "~0.27.2"
   }
 }
