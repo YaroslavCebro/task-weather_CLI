@@ -6,7 +6,7 @@ const printError = (error) => {
     console.log(chalk.bgRed(" ERROR "), error);
 };
 
-const prinSuccess = (message) => {
+const printSuccess = (message) => {
     console.log(chalk.bgGreen(" SUCCESS "), message);
 };
 
@@ -20,4 +20,15 @@ const printHelp = () => {
     );
 };
 
-export { printError, prinSuccess, printHelp };
+const printWeather = ({name, main, wind, clouds, weather}) => {
+    console.log(
+        `${chalk.bgCyan(name)}
+        Описание - ${chalk.bgCyan(weather[0].description)}
+        Облачность - ${chalk.bgCyan(clouds.all)} 
+        Температура - ${chalk.bgCyan(main.temp)} 
+    Ветер:
+        Скорость - ${chalk.bgCyan(wind.speed)}`
+    );
+};
+
+export { printError, printSuccess, printHelp, printWeather };
